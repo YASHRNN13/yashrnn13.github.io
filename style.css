@@ -1,0 +1,460 @@
+/* -------------------- ROOT THEME COLORS -------------------- */
+:root {
+  --navy: #071127;
+  --navy-light: #0d1833;
+  --peach: #f6a98f;
+  --peach-dark: #f28e66;
+  --aqua: #4dd2c9;
+  --white: #ffffff;
+  --muted: #cbd6df;
+  --radius: 16px;
+  --maxw: 1100px;
+
+  /* Neon glow */
+--glow: 0 0 4px rgba(255,255,255,0.35);
+--glow-hover: 0 0 10px rgba(255,255,255,0.55);
+
+}
+
+/* -------------------- BASE STYLE -------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, var(--navy) 0%, #02030a 100%);
+  font-family: 'Inter', sans-serif;
+  color: var(--muted);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--aqua);
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 18px;
+}
+
+/* -------------------- NAVBAR -------------------- */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  background: rgba(2,6,23,0.55);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-inner {
+  max-width: var(--maxw);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 18px;
+  align-items: center;
+}
+
+.brand {
+  color: var(--white);
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.navlinks a {
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--muted);
+  transition: 0.25s ease;
+}
+
+.navlinks a:hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--white);
+  box-shadow: var(--glow);
+}
+/* NEW HERO (LEFT IMAGE + RIGHT TEXT) */
+.hero-left {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid rgba(255,255,255,0.15);
+  box-shadow: 0 0 15px rgba(255,255,255,0.15);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-name {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--white);
+  margin: 0;
+}
+
+.hero-role {
+  font-size: 18px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.hero-desc {
+  margin-top: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+  .hero-container { 
+    flex-direction: column; 
+    text-align: center;
+  }
+}
+
+
+/* -------------------- ABOUT SECTION -------------------- */
+.about {
+  margin: 22px auto;
+  padding: 36px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, var(--peach) 0%, var(--peach-dark) 100%);
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 28px;
+  align-items: center;
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin: 0 0 10px 0;
+  color: #071226;
+}
+
+.about p {
+  font-size: 16px;
+  color: #142528;
+}
+
+.right-photo {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 6px solid rgba(0,0,0,0.05);
+}
+
+.right-photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* -------------------- EDUCATION BAND -------------------- */
+.section {
+  max-width: var(--maxw);
+  margin: 18px auto;
+  padding: 0 18px;
+}
+
+.edu-band {
+  background: linear-gradient(180deg, var(--navy-light), #0b1222);
+  padding: 36px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.edu-head {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--peach);
+  margin-bottom: 12px;
+}
+
+.edu-item strong {
+  color: var(--white);
+}
+
+.sep { height: 18px; }
+.edu-item:hover {
+  transform: translateX(6px);
+  color: var(--white);
+}
+
+.edu-item:hover::before {
+  width: 4px;  /* glowing bar */
+  opacity: 1;
+  box-shadow: 0 0 10px var(--aqua);
+}
+
+
+/* -------------------- PROJECTS GRID -------------------- */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+
+.proj-card {
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s ease;
+}
+
+.proj-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow-hover);
+}
+
+.proj-thumb {
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.proj-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.proj-title {
+  color: var(--white);
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* -------------------- CERTIFICATES GRID -------------------- */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.cert-card {
+  background: rgba(255,255,255,0.03);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: .3s ease;
+}
+
+.cert-card:hover {
+  box-shadow: var(--glow-hover);
+}
+
+.cert-card img {
+  width: 100%;
+  height: 140px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* -------------------- SOCIAL ICON BUTTONS -------------------- */
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #000000;              /* 🔥 Black text */
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+box-shadow: 0 0 4px rgba(255,255,255,0.25);
+  transition: 0.3s ease;
+}
+
+
+.btn:hover {
+  background: rgba(255,255,255,0.45);
+  box-shadow: 0 0 8px rgba(255,255,255,0.45);
+}
+
+
+/* ICONS */
+.btn svg {
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 0 6px white);
+}
+
+.btn:hover svg {
+  filter: drop-shadow(0 0 12px white);
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+  margin-top: 22px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.footer-top {
+  background: var(--peach);
+  padding: 20px;
+  z-index: 2000;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;           /* 🔥 Make all text black */
+}
+
+.footer-top .footer-title,
+.footer-top .footer-info {
+  color: #000000;           /* 🔥 Ensures both title & email text are black */
+}
+.footer-top {
+  background: var(--peach);
+  padding: 20px;
+  z-index: 2000;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;           /* 🔥 Make all text black */
+}
+
+.footer-top .footer-title,
+.footer-top .footer-info {
+  color: #000000;           /* 🔥 Ensures both title & email text are black */
+}
+
+.footer-actions a {
+  margin-top: 12px; 
+  display: block;
+}
+
+
+.footer-bottom {
+  background: var(--aqua);
+  padding: 10px;
+  text-align: center;
+  color: #071226;
+  font-weight: 700;
+}
+/* 2-COLUMN HOBBY LAYOUT */
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 15px;
+}
+/* OPTION A — NEON LEFT BORDER GLOW */
+.hobby-item {
+  position: relative;
+  padding-left: 12px;  /* space for glowing line */
+  transition: 0.3s ease;
+}
+
+.hobby-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 0px;  /* hidden by default */
+  height: calc(100% - 16px);
+  background: var(--aqua);
+  border-radius: 4px;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.hobby-item:hover {
+  transform: translateX(6px);
+  color: var(--white);
+}
+
+.hobby-item:hover::before {
+  width: 4px;  /* glowing bar */
+  opacity: 1;
+  box-shadow: 0 0 10px var(--aqua);
+}
+
+/* Mobile-friendly fix */
+@media (max-width: 700px) {
+  .hobby-item:hover {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 700px) {
+  .hobby-grid {
+    grid-template-columns: 1fr;
+  }
+}
