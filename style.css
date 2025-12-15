@@ -1,0 +1,346 @@
+/* ===================== ROOT THEME ===================== */
+:root {
+  --navy: #071127;
+  --navy-light: #0d1833;
+  --peach: #f6a98f;
+  --peach-dark: #f28e66;
+  --aqua: #4dd2c9;
+  --white: #ffffff;
+  --muted: #cbd6df;
+  --radius: 16px;
+  --maxw: 1100px;
+
+  --glow: 0 0 6px rgba(255,255,255,0.25);
+  --glow-hover: 0 0 12px rgba(255,255,255,0.45);
+}
+
+/* ===================== BASE ===================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, var(--navy) 0%, #02030a 100%);
+  color: var(--muted);
+}
+
+a {
+  text-decoration: none;
+  color: var(--aqua);
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: auto;
+  padding: 18px;
+}
+
+/* ===================== NAVBAR ===================== */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 3000;
+  background: rgba(2,6,23,0.6);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-inner {
+  max-width: var(--maxw);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+/* Desktop nav */
+.navlinks {
+  display: flex;
+  gap: 14px;
+}
+
+.navlinks a {
+  padding: 8px 12px;
+  font-weight: 600;
+  color: var(--muted);
+  border-radius: 8px;
+}
+
+.navlinks a:hover {
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  box-shadow: var(--glow);
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===================== HERO ===================== */
+.hero-left {
+  max-width: var(--maxw);
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid rgba(255,255,255,0.2);
+  box-shadow: var(--glow-hover);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: var(--white);
+  margin: 0;
+}
+
+.hero-role {
+  margin-top: 6px;
+}
+
+.hero-desc {
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* ===================== ABOUT ===================== */
+.about {
+  background: linear-gradient(180deg, var(--peach), var(--peach-dark));
+  padding: 36px;
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 28px;
+  align-items: center;
+  margin: 22px auto;
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  color: #071226;
+  font-size: 32px;
+}
+
+.about p {
+  color: #142528;
+}
+
+.right-photo {
+  height: 320px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.right-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===================== EDUCATION ===================== */
+.section {
+  max-width: var(--maxw);
+  margin: 18px auto;
+  padding: 0 18px;
+}
+
+.edu-band {
+  background: linear-gradient(180deg, var(--navy-light), #0b1222);
+  padding: 36px;
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.edu-head {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--peach);
+}
+
+.edu-item strong {
+  color: var(--white);
+}
+
+/* ===================== PROJECTS ===================== */
+.card {
+  background: rgba(255,255,255,0.04);
+  padding: 22px;
+  border-radius: var(--radius);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+
+.proj-card {
+  padding: 14px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+}
+
+.proj-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow-hover);
+}
+
+/* ===================== CERTIFICATES ===================== */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+  gap: 16px;
+}
+
+.cert-card {
+  padding: 12px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+  margin-top: 22px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.footer-top {
+  background: var(--peach);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+
+.footer-bottom {
+  background: var(--aqua);
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* ===================== HOBBIES ===================== */
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.hobby-item {
+  padding-left: 14px;
+  position: relative;
+}
+
+.hobby-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--aqua);
+  opacity: 0;
+}
+
+.hobby-item:hover::before {
+  opacity: 1;
+}
+
+/* ===================== MOBILE FIX + HAMBURGER ===================== */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #050b1d;
+  }
+
+  .navlinks.show {
+    display: flex;
+  }
+
+  .navlinks a {
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about {
+    display: block;
+    padding: 22px;
+  }
+
+  .right-photo {
+    height: 240px;
+    margin-bottom: 16px;
+  }
+
+  .edu-band,
+  .projects-grid,
+  .cert-grid {
+    display: block;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hobby-grid {
+    grid-template-columns: 1fr;
+  }
+}
