@@ -1,346 +1,449 @@
-/* ===================== ROOT THEME ===================== */
-:root {
-  --navy: #071127;
-  --navy-light: #0d1833;
-  --peach: #f6a98f;
-  --peach-dark: #f28e66;
-  --aqua: #4dd2c9;
-  --white: #ffffff;
-  --muted: #cbd6df;
-  --radius: 16px;
-  --maxw: 1100px;
-
-  --glow: 0 0 6px rgba(255,255,255,0.25);
-  --glow-hover: 0 0 12px rgba(255,255,255,0.45);
+/* ========== ROOT ========== */
+:root{
+  --navy:#071127;
+  --navy2:#0d1833;
+  --peach:#f6a98f;
+  --aqua:#4dd2c9;
+  --white:#fff;
+  --muted:#cbd6df;
+  --radius:16px;
+  --maxw:1100px;
+  --glow:0 0 12px rgba(77,210,201,.65);
 }
 
-/* ===================== BASE ===================== */
+/* ---------------- RESET ---------------- */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, var(--navy) 0%, #02030a 100%);
-  color: var(--muted);
+html {
+  scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
-  color: var(--aqua);
+body {
+  body {
+  font-family: "Inter", sans-serif;
 }
 
-.wrap {
-  max-width: var(--maxw);
-  margin: auto;
-  padding: 18px;
+h1, h2, h3, .section-title, .brand {
+  font-family: "Playfair Display", serif;
 }
 
-/* ===================== NAVBAR ===================== */
+  background: radial-gradient(circle at top, #0b1a33, #050a16 70%);
+  color: #e9f0ff;
+  line-height: 1.7;
+}
+
+/* ---------------- NAVBAR ---------------- */
 .topnav {
   position: sticky;
   top: 0;
-  z-index: 3000;
-  background: rgba(2,6,23,0.6);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 1000;
+  background: linear-gradient(90deg, #07162e, #020816);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .nav-inner {
-  max-width: var(--maxw);
+  max-width: 1200px;
   margin: auto;
+  padding: 18px 24px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 12px 18px;
+  align-items: center;
 }
 
 .brand {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--white);
+  font-family: "Playfair Display", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-/* Desktop nav */
 .navlinks {
   display: flex;
-  gap: 14px;
+  gap: 28px;
 }
 
 .navlinks a {
-  padding: 8px 12px;
+  color: #ffffff;
+  text-decoration: none;
   font-weight: 600;
-  color: var(--muted);
-  border-radius: 8px;
-}
-
-.navlinks a:hover {
-  background: rgba(255,255,255,0.1);
-  color: var(--white);
-  box-shadow: var(--glow);
-}
-
-/* Hamburger */
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* ===================== HERO ===================== */
-.hero-left {
-  max-width: var(--maxw);
-  margin: 40px auto;
-  padding: 20px;
-}
-
-.hero-container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.hero-photo {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 6px solid rgba(255,255,255,0.2);
-  box-shadow: var(--glow-hover);
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  color: var(--white);
-  margin: 0;
-}
-
-.hero-role {
-  margin-top: 6px;
-}
-
-.hero-desc {
-  margin-top: 16px;
-  line-height: 1.6;
-}
-
-/* ===================== ABOUT ===================== */
-.about {
-  background: linear-gradient(180deg, var(--peach), var(--peach-dark));
-  padding: 36px;
-  border-radius: var(--radius);
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 28px;
-  align-items: center;
-  margin: 22px auto;
-}
-
-.about h2 {
-  font-family: 'Playfair Display', serif;
-  color: #071226;
-  font-size: 32px;
-}
-
-.about p {
-  color: #142528;
-}
-
-.right-photo {
-  height: 320px;
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.right-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ===================== EDUCATION ===================== */
-.section {
-  max-width: var(--maxw);
-  margin: 18px auto;
-  padding: 0 18px;
-}
-
-.edu-band {
-  background: linear-gradient(180deg, var(--navy-light), #0b1222);
-  padding: 36px;
-  border-radius: var(--radius);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
-}
-
-.edu-head {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  color: var(--peach);
-}
-
-.edu-item strong {
-  color: var(--white);
-}
-
-/* ===================== PROJECTS ===================== */
-.card {
-  background: rgba(255,255,255,0.04);
-  padding: 22px;
-  border-radius: var(--radius);
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 16px;
-}
-
-.proj-card {
-  padding: 14px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 12px;
-}
-
-.proj-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--glow-hover);
-}
-
-/* ===================== CERTIFICATES ===================== */
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
-  gap: 16px;
-}
-
-.cert-card {
-  padding: 12px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 12px;
-}
-
-/* ===================== FOOTER ===================== */
-.footer {
-  margin-top: 22px;
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.footer-top {
-  background: var(--peach);
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  color: black;
-}
-
-.footer-bottom {
-  background: var(--aqua);
-  padding: 10px;
-  text-align: center;
-  font-weight: 700;
-}
-
-/* ===================== HOBBIES ===================== */
-.hobby-grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 20px;
-}
-
-.hobby-item {
-  padding-left: 14px;
   position: relative;
 }
 
-.hobby-item::before {
+.navlinks a::after {
   content: "";
   position: absolute;
   left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--aqua);
-  opacity: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #5fffe3;
+  transition: width 0.3s;
 }
 
-.hobby-item:hover::before {
-  opacity: 1;
+.navlinks a:hover::after {
+  width: 100%;
 }
 
-/* ===================== MOBILE FIX + HAMBURGER ===================== */
+.menu-toggle {
+  display: none;
+}
+
+/* ---------------- LAYOUT ---------------- */
+.wrap {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 24px;
+}
+
+.section {
+  margin-top: 80px;
+}
+
+
+/* ======================================================
+   UNIFIED SECTION HEADING STYLE (FINAL – SAFE)
+====================================================== */
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 600;
+  color: #ffb48a;
+  margin-bottom: 26px;
+  letter-spacing: 0.4px;
+}
+
+/* Slight divider under headings (optional but classy) */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #ffb48a, transparent);
+  margin-top: 10px;
+}
+
 @media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .navlinks {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    background: #050b1d;
-  }
-
-  .navlinks.show {
-    display: flex;
-  }
-
-  .navlinks a {
-    padding: 14px;
-    font-size: 1.1rem;
-  }
-
   .hero-container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .hero-photo {
-    width: 180px;
-    height: 180px;
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
+}
 
-  .about {
-    display: block;
-    padding: 22px;
+
+
+h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 34px;
+  margin-bottom: 32px;
+}
+
+/* ---------------- HERO ---------------- */
+.hero-container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero-photo img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fcfdfd;
+}
+
+.hero-name {
+  font-family: "Playfair Display", serif;
+  font-size: 54px;
+}
+
+.hero-role {
+  color: #eff1f0;
+  font-size: 20px;
+  margin: 10px 0 18px;
+}
+
+.hero-buttons {
+  margin-top: 26px;
+  display: flex;
+  gap: 16px;
+}
+
+/* ---------------- BUTTON ---------------- */
+.btn {
+  background: rgba(235, 226, 226, 0.393);
+  color: rgb(3, 3, 3);
+  padding: 14px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #fbfefe;
+  color: #020816;
+}
+
+/* ABOUT ME – PROFESSIONAL */
+.about-card {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+}
+
+.about-card h2 {
+  margin-bottom: 20px;
+}
+
+.about-card p {
+  line-height: 1.8;
+  margin-bottom: 16px;
+  color: rgb(230, 230, 230);
+}
+
+/* EDUCATION */
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.edu-card {
+  padding: 32px;
+  border-radius: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.edu-card {
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.edu-item strong {
+  font-size: 17px;
+}
+
+.edu-item p {
+  opacity: 0.9;
+}
+
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.edu-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffb38a;
+}
+
+.edu-item {
+  margin-bottom: 22px;
+}
+
+.edu-item p {
+  margin-top: 6px;
+  line-height: 1.6;
+  color: #e4e4e4;
+}
+
+.edu-item ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.edu-item li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .edu-grid {
+    grid-template-columns: 1fr;
   }
+}
 
-  .right-photo {
-    height: 240px;
-    margin-bottom: 16px;
+/* PROJECTS*/
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.proj-card {
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+.proj-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(77,210,201,0.35);
+}
+
+.proj-thumb img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.proj-title {
+  margin-top: 14px;
+  color: #ffffff;
+}
+
+.proj-link {
+  margin-top: auto;
+  color: #4dd2c9;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+     align-items: stretch;  
   }
+}
 
-  .edu-band,
-  .projects-grid,
-  .cert-grid {
-    display: block;
-  }
+.proj-card {
+  cursor: pointer;
+}
 
-  .footer-top {
-    flex-direction: column;
-    text-align: center;
-  }
+.proj-card * {
+  pointer-events: none;
+}
 
+
+
+/* ---------------- CERTIFICATES ---------------- */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cert-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 22px;
+  padding: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+.cert-card img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* ---------------- SOCIALS ---------------- */
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* INTERESTS & HOBBIES – GLASS */
+.hobby-glass {
+  max-width: 1000px;
+  margin: auto;
+  padding: 36px;
+  border-radius: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.02)
+  );
+  backdrop-filter: blur(14px);
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.hobby-grid ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.hobby-grid li {
+  margin-bottom: 12px;
+  color: #eaeaea;
+}
+
+@media (max-width: 800px) {
   .hobby-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+  background: linear-gradient(135deg, #ffb595, #ff9d75);
+  border-radius: 26px;
+  padding: 40px;
+  margin-top: 80px;
+  color: #1a1a1a;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-info {
+  font-size: 18px;
+  color: #1a1a1a;
+}
+
+.footer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  background: #4fd1c5;
+  color: #002b2b;
+  text-align: center;
+  padding: 14px;
+  border-radius: 16px;
+  font-weight: 600;
 }
